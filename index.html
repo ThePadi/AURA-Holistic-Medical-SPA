@@ -336,10 +336,10 @@ html.js .panel:not(.on), html.js .sub:not(.on){display:none}
 .hero h1{font-size:clamp(2.55rem,7vw,5.4rem);line-height:1.02;letter-spacing:-.02em;max-width:11.5em}
 .hero h1 .l{display:block;transition:opacity .7s var(--ease)}
 .hero__sub{margin-top:24px;max-width:31em;font-size:1.12rem;color:var(--ink-soft)}
-#p-start:has(.door--spa:hover) .hero h1 .l1,
-#p-start:has(.door--spa:focus-within) .hero h1 .l1,
-#p-start:has(.door--med:hover) .hero h1 .l2,
-#p-start:has(.door--med:focus-within) .hero h1 .l2{opacity:.32}
+#p-start:has(.door--spa:hover) .hero h1 .l2,
+#p-start:has(.door--spa:focus-within) .hero h1 .l2,
+#p-start:has(.door--med:hover) .hero h1 .l1,
+#p-start:has(.door--med:focus-within) .hero h1 .l1{opacity:.32}
 #p-start:has(.door--spa:hover) .aura,
 #p-start:has(.door--spa:focus-within) .aura{--glow-a:rgba(179,146,121,.55);--glow-b:rgba(140,156,126,.55)}
 .hero__photo{height:clamp(220px,36vw,480px);border-radius:clamp(28px,6vw,80px) clamp(28px,6vw,80px) 0 0}
@@ -408,6 +408,7 @@ html.js .panel:not(.on), html.js .sub:not(.on){display:none}
 .revs__h{margin:0 0 16px}
 .score__count{font-size:1.15rem;margin:10px 0 0}
 .score__count strong{font-weight:600}
+.score__total{font-size:1.2rem;margin:0 0 22px}.score__total strong{font-weight:600}
 .profiles{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
 .profile{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:.5em 1.1em;border-radius:999px;box-shadow:0 0 0 1px var(--line);
   text-decoration:none;font-size:.95rem;background:var(--bg)}
@@ -574,8 +575,8 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
           <figure class="aura__kz"><img src="img/start_kinga.jpg" alt="Kinga Zalewska, AURA HOLISTIC MEDICAL&amp;SPA"></figure>
         </div>
         <div class="hero__text">
-          <h1><span class="l l1">Medycyna estetyczna</span> <span class="l l2">i Head Spa w&nbsp;Pruszkowie</span></h1>
-          <p class="hero__sub">Centrum Medycyny Regeneracyjnej i Spa AURA. Zajmujemy się medycyną estetyczną i autologiczną, a także Head Spa, akupunkturą i masażami. Miejsce, w którym piękno łączy się ze zdrowiem.</p>
+          <h1><span class="l l1">Miejsce, w którym dusza łączy się z ciałem,</span> <span class="l l2">a piękno ze zdrowiem.</span></h1>
+          <p class="hero__sub">Centrum Medycyny Regeneracyjnej i Spa w Pruszkowie. Po jednej stronie Head Spa, akupunktura i masaże, po drugiej medycyna estetyczna i autologiczna. Wybierz, czego dziś potrzebujesz.</p>
           <div class="cta">
             <a class="btn btn--solid" href="https://booksy.com/pl-pl/243811_aura-holistic-medical-spa-kinga-zalewska-medycyna-regeneracyjna_medycyna-estetyczna_4404_pruszkow" target="_blank" rel="noopener">Zarezerwuj MEDICAL</a>
             <a class="btn btn--line" href="https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow" target="_blank" rel="noopener">Zarezerwuj SPA</a>
@@ -622,7 +623,7 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
   <div class="stats" aria-label="AURA w liczbach">
     <div class="wrap">
       <div class="stat"><b>5,0</b><span>ocena w Booksy, MEDICAL i SPA</span></div>
-      <div class="stat"><b>336</b><span>opinii w Booksy</span></div>
+      <div class="stat"><b>337</b><span>opinii w Booksy</span></div>
       <div class="stat"><b>wt–pt</b><span>przyjmujemy po rezerwacji</span></div>
       <div class="stat"><b>0 zł</b><span>plan zabiegowy</span></div>
     </div>
@@ -1016,13 +1017,14 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
   </div>
   <section class="sec sec--tight" style="padding-top:0">
     <div class="wrap">
+      <p class="score__total"><strong>337 opinii</strong> w Booksy, na obu naszych profilach, średnia ocena 5,0</p>
       <div class="scores">
         <div class="score">
           <div class="score__big">5,0</div>
           <div>
             <span class="tag"><svg aria-hidden="true"><use href="#i-med"/></svg>Aura MEDICAL</span>
             <span class="stars" aria-label="5 na 5 gwiazdek"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
-            <p class="score__count"><strong>172 opinie</strong> na Booksy MEDICAL</p>
+            <p class="score__count"><strong>173 opinie</strong> na Booksy MEDICAL</p>
             <div class="profiles"><a class="btn btn--line" href="https://booksy.com/pl-pl/243811_aura-holistic-medical-spa-kinga-zalewska-medycyna-regeneracyjna_medycyna-estetyczna_4404_pruszkow" target="_blank" rel="noopener" aria-label="Opinie Aura MEDICAL na Booksy">Opinie na Booksy</a></div>
           </div>
         </div>
