@@ -778,6 +778,7 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
   <div class="sub" data-sub="paznokcie" data-title="Paznokcie">
     <section class="sec sec--tight">
       <div class="wrap sheet">
+        <figure class="ph sheet__media" data-rm><img src="img/paznokcie_sheet.jpg" alt="Manicure w odcieniu nude wykonany w AURA"></figure>
         <div class="sheet__body">
           <h2>Paznokcie</h2>
           <p class="lead" style="margin-top:14px">Paznokciami zajmuje się u nas Maria, stylistka z 8-letnim doświadczeniem. Dba o każdy detal.</p>
@@ -791,6 +792,7 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
           </ul>
           <blockquote class="quote">„Perfekcja i dbanie o każdy detal.”<cite>Michalina, paznokcie</cite></blockquote>
           <a class="textlink" href="https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow" target="_blank" rel="noopener">Umów paznokcie w Booksy<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="textlink" href="#realizacje/paznokcie">Zobacz nasze paznokcie<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
     </section>
@@ -1013,10 +1015,18 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
     <div class="wrap">
       <span class="tag"><svg aria-hidden="true"><use href="#i-leaf"/></svg>Realizacje</span>
       <h2>Zajrzyj do nas</h2>
-      <p class="lead">Efekty zabiegów medycyny estetycznej: usta, zmarszczki mimiczne, skóra i owal twarzy. Kliknij zdjęcie, żeby je powiększyć.</p>
+      <p class="lead">Efekty zabiegów medycyny estetycznej i nasze paznokcie. Kliknij zdjęcie, żeby je powiększyć.</p>
     </div>
   </div>
-  <div class="sub" data-sub="medical" data-title="Medical"><section class="sec sec--tight" style="padding-top:0"><div class="wrap"><div class="gal" data-gal="medical"></div></div></section></div>
+  <nav class="subnav" aria-label="Realizacje">
+    <div class="subnav__scroll"><div class="strack">
+      <span class="ink" aria-hidden="true"></span>
+      <a href="#realizacje/medical" data-sub="medical">Medycyna estetyczna</a>
+      <a href="#realizacje/paznokcie" data-sub="paznokcie">Paznokcie</a>
+    </div></div>
+  </nav>
+  <div class="sub" data-sub="medical" data-title="Medycyna estetyczna"><section class="sec sec--tight"><div class="wrap"><div class="gal" data-gal="medical"></div></div></section></div>
+  <div class="sub" data-sub="paznokcie" data-title="Paznokcie"><section class="sec sec--tight"><div class="wrap"><div class="gal" data-gal="paznokcie"></div></div></section></div>
 </section>
 
 <!-- ============ OPINIE ============ -->
@@ -1209,9 +1219,10 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
 
   /* ---------- galleries (Realizacje) ---------- */
   var GAL = {
-    medical: { cap: 'Medical', items: [
-      'img/medical_01.jpg','img/medical_02.jpg','img/medical_03.jpg','img/medical_04.jpg','img/medical_05.jpg','img/medical_06.jpg',
-      'img/medical_07.jpg','img/medical_08.jpg','img/medical_09.jpg','img/medical_10.jpg','img/medical_11.jpg','img/medical_12.jpg'] }
+    medical: { cap: 'Medycyna estetyczna', items: [
+      'img/medical_13.jpg','img/medical_14.jpg','img/medical_01.jpg','img/medical_02.jpg','img/medical_03.jpg','img/medical_04.jpg','img/medical_05.jpg','img/medical_06.jpg',
+      'img/medical_07.jpg','img/medical_08.jpg','img/medical_09.jpg','img/medical_10.jpg','img/medical_11.jpg','img/medical_12.jpg'] },
+    paznokcie: { cap: 'Paznokcie', items: ['img/paznokcie_01.jpg','img/paznokcie_02.jpg','img/paznokcie_03.jpg','img/paznokcie_04.jpg','img/paznokcie_05.jpg','img/paznokcie_06.jpg','img/paznokcie_07.jpg','img/paznokcie_08.jpg','img/paznokcie_09.jpg','img/paznokcie_10.jpg','img/paznokcie_11.jpg','img/paznokcie_12.jpg','img/paznokcie_13.jpg','img/paznokcie_14.jpg','img/paznokcie_15.jpg','img/paznokcie_16.jpg'] }
   };
   document.querySelectorAll('[data-gal]').forEach(function (g) {
     var d = GAL[g.getAttribute('data-gal')];
