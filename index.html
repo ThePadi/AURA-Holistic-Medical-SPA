@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="pl" data-mode="spa">
+<html lang="pl" data-mode="medical">
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AURA HOLISTIC MEDICAL&amp;SPA Pruszków | Head Spa, akupunktura, masaże, medycyna estetyczna</title>
-<meta name="description" content="AURA HOLISTIC MEDICAL&amp;SPA w Pruszkowie, ul. Wołowskiego 2. Head Spa, akupunktura, masaże Kobido, tajski i ajurwedyjski, medycyna estetyczna i autologiczna (osocze, fibryna), paznokcie. Rezerwacja przez Booksy, tel. 535 549 554.">
+<title>AURA HOLISTIC MEDICAL&amp;SPA Pruszków | Medycyna estetyczna i autologiczna, Head Spa, akupunktura, masaże</title>
+<meta name="description" content="AURA HOLISTIC MEDICAL&amp;SPA w Pruszkowie, ul. Wołowskiego 2. Medycyna estetyczna i autologiczna: osocze, fibryna, modelowanie ust, stymulatory. Obok Head Spa, akupunktura, masaże Kobido, tajski i ajurwedyjski oraz paznokcie. Rezerwacja przez Booksy, tel. 535 549 554.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2334402F'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='40' fill='%23EFEEE5'%3EA%3C/text%3E%3C/svg%3E">
-<meta name="theme-color" content="#EFEEE5">
+<meta name="theme-color" content="#EDF1F0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Fraunces:opsz,wght,SOFT@9..144,300..600,0..100&display=swap" rel="stylesheet">
@@ -25,10 +25,10 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "DaySpa",
+  "@type": ["MedicalBusiness", "DaySpa"],
   "name": "AURA HOLISTIC MEDICAL&SPA",
   "alternateName": "Centrum Medycyny Regeneracyjnej i Spa AURA HOLISTIC MEDICAL&SPA",
-  "description": "Head Spa, akupunktura, masaże, medycyna estetyczna i autologiczna, paznokcie w Pruszkowie.",
+  "description": "Medycyna estetyczna i autologiczna, a także Head Spa, akupunktura, masaże i paznokcie w Pruszkowie.",
   "telephone": "+48535549554",
   "image": "img/start_hero.jpg",
   "address": {
@@ -39,17 +39,16 @@
     "addressCountry": "PL"
   },
   "openingHoursSpecification": [
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "10:00", "closes": "19:00"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "10:00", "closes": "21:00"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "10:00", "closes": "20:00"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "21:00"}
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "10:00", "closes": "21:30"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "10:00", "closes": "22:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "09:00", "closes": "22:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "22:00"}
   ],
-  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "336", "bestRating": "5"},
   "sameAs": [
     "https://www.instagram.com/aura_holistic_medical_spa/",
     "https://www.facebook.com/share/1An9zxqZTr/",
-    "https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow",
-    "https://booksy.com/pl-pl/243811_aura-holistic-medical-spa-kinga-zalewska-medycyna-regeneracyjna_medycyna-estetyczna_4404_pruszkow"
+    "https://booksy.com/pl-pl/243811_aura-holistic-medical-spa-kinga-zalewska-medycyna-regeneracyjna_medycyna-estetyczna_4404_pruszkow",
+    "https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow"
   ]
 }
 </script>
@@ -334,12 +333,12 @@ html.js .panel:not(.on), html.js .sub:not(.on){display:none}
 .hero h1{font-size:clamp(2.55rem,7vw,5.4rem);line-height:1.02;letter-spacing:-.02em;max-width:11.5em}
 .hero h1 .l{display:block;transition:opacity .7s var(--ease)}
 .hero__sub{margin-top:24px;max-width:31em;font-size:1.12rem;color:var(--ink-soft)}
-#p-start:has(.door--spa:hover) .hero h1 .l2,
-#p-start:has(.door--spa:focus-within) .hero h1 .l2,
-#p-start:has(.door--med:hover) .hero h1 .l1,
-#p-start:has(.door--med:focus-within) .hero h1 .l1{opacity:.32}
-#p-start:has(.door--med:hover) .aura,
-#p-start:has(.door--med:focus-within) .aura{--glow-a:rgba(95,133,144,.45);--glow-b:rgba(200,214,210,.9)}
+#p-start:has(.door--spa:hover) .hero h1 .l1,
+#p-start:has(.door--spa:focus-within) .hero h1 .l1,
+#p-start:has(.door--med:hover) .hero h1 .l2,
+#p-start:has(.door--med:focus-within) .hero h1 .l2{opacity:.32}
+#p-start:has(.door--spa:hover) .aura,
+#p-start:has(.door--spa:focus-within) .aura{--glow-a:rgba(179,146,121,.55);--glow-b:rgba(140,156,126,.55)}
 .hero__photo{height:clamp(220px,36vw,480px);border-radius:clamp(28px,6vw,80px) clamp(28px,6vw,80px) 0 0}
 
 /* doors */
@@ -349,9 +348,11 @@ html.js .panel:not(.on), html.js .sub:not(.on){display:none}
 .door:hover{box-shadow:0 0 0 1.5px var(--ink);transform:translateY(-2px)}
 .door .ph{aspect-ratio:16/10;border-radius:0}
 .door--med .ph{background:radial-gradient(120% 90% at 20% 15%, rgba(255,255,255,.6), transparent 60%),radial-gradient(90% 80% at 85% 90%, #E6ECEB, transparent 70%),var(--mineral-pale)}
+.door--spa .ph{background:radial-gradient(120% 90% at 20% 15%, rgba(255,255,255,.55), transparent 60%),radial-gradient(90% 80% at 85% 90%, var(--clay-pale), transparent 70%),var(--sage-pale)}
 .door__body{padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:10px;flex:1}
 .door__tag{display:inline-flex;align-items:center;gap:8px;font-size:.92rem;font-weight:500;color:var(--accent-ink)}
 .door--med .door__tag{color:#3F6570}
+.door--spa .door__tag{color:#4F5E45}
 .door__tag svg{width:20px;height:20px}
 .door h2{font-size:clamp(1.7rem,3.4vw,2.4rem)}
 .door h2 a{text-decoration:none}
@@ -397,6 +398,11 @@ html.js .panel:not(.on), html.js .sub:not(.on){display:none}
   border-radius:32px;background:var(--paper);box-shadow:0 0 0 1px var(--line);margin-bottom:28px}
 .score__big{font-family:var(--f-display);font-weight:300;font-variation-settings:"SOFT" 100,"opsz" 144;font-size:clamp(4.2rem,11vw,7rem);line-height:.9}
 .score .stars svg{width:24px;height:24px}
+.scores{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:clamp(28px,4vw,44px)}
+.scores .score{margin:0;align-items:start}
+.score .tag{margin-bottom:8px}
+.tag--spa{color:#4F5E45}
+.revs__h{margin:0 0 16px}
 .score__count{font-size:1.15rem;margin:10px 0 0}
 .score__count strong{font-weight:600}
 .profiles{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
@@ -500,6 +506,7 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
   .stat:nth-last-child(-n+2){border-bottom:0}
   .gal{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
   .score{grid-template-columns:minmax(0,1fr);gap:8px}
+  .scores{grid-template-columns:minmax(0,1fr)}
   .feature{grid-template-columns:minmax(0,1fr)}
   .feature .ph{max-width:320px;width:100%}
   .hours-grid{grid-template-columns:minmax(0,1fr)}
@@ -537,8 +544,8 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
       <div class="track">
         <span class="ink" aria-hidden="true"></span>
         <a href="#start" data-tab="start">Start</a>
-        <a href="#spa" data-tab="spa">SPA</a>
         <a href="#medical" data-tab="medical">MEDICAL</a>
+        <a href="#spa" data-tab="spa">SPA</a>
         <a href="#realizacje" data-tab="realizacje">Realizacje</a>
         <a href="#opinie" data-tab="opinie">Opinie</a>
         <a href="#zespol" data-tab="zespol">Zespół</a>
@@ -546,7 +553,7 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
       </div>
     </nav>
     <a class="top__tel" href="tel:+48535549554" aria-label="Zadzwoń: 535 549 554"><svg aria-hidden="true"><use href="#i-tel"/></svg></a>
-    <a class="btn btn--solid top__book js-book" href="https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow" target="_blank" rel="noopener">Zarezerwuj</a>
+    <a class="btn btn--solid top__book js-book" href="https://booksy.com/pl-pl/243811_aura-holistic-medical-spa-kinga-zalewska-medycyna-regeneracyjna_medycyna-estetyczna_4404_pruszkow" target="_blank" rel="noopener">Zarezerwuj</a>
   </div>
 </header>
 
@@ -563,10 +570,11 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
           <div class="aura__ring aura__ring--2"></div>
         </div>
         <div class="hero__text">
-          <h1><span class="l l1">Miejsce, w którym dusza łączy się z ciałem,</span> <span class="l l2">a piękno ze zdrowiem.</span></h1>
-          <p class="hero__sub">Centrum Medycyny Regeneracyjnej i Spa w Pruszkowie. Po jednej stronie Head Spa, akupunktura i masaże, po drugiej medycyna estetyczna i autologiczna. Wybierz, czego dziś potrzebujesz.</p>
+          <h1><span class="l l1">Medycyna estetyczna</span> <span class="l l2">i Head Spa w&nbsp;Pruszkowie</span></h1>
+          <p class="hero__sub">Centrum Medycyny Regeneracyjnej i Spa AURA. Zajmujemy się medycyną estetyczną i autologiczną, a także Head Spa, akupunkturą i masażami. Miejsce, w którym piękno łączy się ze zdrowiem.</p>
           <div class="cta">
-            <a class="btn btn--solid" href="https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow" target="_blank" rel="noopener">Zarezerwuj w Booksy</a>
+            <a class="btn btn--solid" href="https://booksy.com/pl-pl/243811_aura-holistic-medical-spa-kinga-zalewska-medycyna-regeneracyjna_medycyna-estetyczna_4404_pruszkow" target="_blank" rel="noopener">Zarezerwuj MEDICAL</a>
+            <a class="btn btn--line" href="https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow" target="_blank" rel="noopener">Zarezerwuj SPA</a>
             <a class="btn btn--line" href="tel:+48535549554"><svg aria-hidden="true"><use href="#i-tel"/></svg>535 549 554</a>
           </div>
         </div>
@@ -580,18 +588,6 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
 
   <div class="wrap" style="margin-top:clamp(28px,4vw,48px)">
     <div class="doors">
-      <article class="door door--spa">
-        <figure class="ph" data-rm><img src="img/start_spa.jpg" alt="Strefa Head Spa w AURA"></figure>
-        <span class="door__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
-        <div class="door__body">
-          <span class="door__tag"><svg aria-hidden="true"><use href="#i-leaf"/></svg>Aura SPA</span>
-          <h2><a href="#spa">Head Spa, akupunktura, masaże</a></h2>
-          <p>Rytuały, w których nic nie musisz. Head Spa to nasza specjalność.</p>
-          <div class="chips">
-            <a href="#spa/head-spa">Head Spa</a><a href="#spa/akupunktura">Akupunktura</a><a href="#spa/masaze">Masaże</a><a href="#spa/paznokcie">Paznokcie</a>
-          </div>
-        </div>
-      </article>
       <article class="door door--med">
         <figure class="ph" data-rm><img src="img/start_medical.jpg" alt="Gabinet medycyny estetycznej AURA"></figure>
         <span class="door__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
@@ -604,12 +600,24 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
           </div>
         </div>
       </article>
+      <article class="door door--spa">
+        <figure class="ph" data-rm><img src="img/start_spa.jpg" alt="Strefa Head Spa w AURA"></figure>
+        <span class="door__go" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+        <div class="door__body">
+          <span class="door__tag"><svg aria-hidden="true"><use href="#i-leaf"/></svg>Aura SPA</span>
+          <h2><a href="#spa">Head Spa, akupunktura, masaże</a></h2>
+          <p>Rytuały, w których nic nie musisz. Head Spa to nasza specjalność.</p>
+          <div class="chips">
+            <a href="#spa/head-spa">Head Spa</a><a href="#spa/akupunktura">Akupunktura</a><a href="#spa/masaze">Masaże</a><a href="#spa/paznokcie">Paznokcie</a>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 
   <div class="stats" aria-label="AURA w liczbach">
     <div class="wrap">
-      <div class="stat"><b>5,0</b><span>ocena w Booksy, SPA i MEDICAL</span></div>
+      <div class="stat"><b>5,0</b><span>ocena w Booksy, MEDICAL i SPA</span></div>
       <div class="stat"><b>336</b><span>opinii w Booksy</span></div>
       <div class="stat"><b>wt–pt</b><span>przyjmujemy po rezerwacji</span></div>
       <div class="stat"><b>0 zł</b><span>plan zabiegowy</span></div>
@@ -624,7 +632,7 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
       </div>
       <div class="duo">
         <blockquote class="rev"><span class="stars" aria-label="5 na 5 gwiazdek"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><p>Cudowna wizyta pełna relaksu, dźwiękoterapia niesamowita.</p><footer><strong>Sylwia</strong>, Head Spa</footer></blockquote>
-        <blockquote class="rev"><span class="stars" aria-label="5 na 5 gwiazdek"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><p>Praca profesjonalnie zrobiona, podejście do klientki na 100%.</p><footer><strong>Ewa</strong>, usta</footer></blockquote>
+        <blockquote class="rev"><span class="stars" aria-label="5 na 5 gwiazdek"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><p>Akupunktura ukoiła moje nerwy, a head spa to chwila tylko dla mnie.</p><footer><strong>Joanna</strong>, akupunktura i Head Spa</footer></blockquote>
       </div>
     </div>
   </section>
@@ -827,7 +835,6 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
               <h3>Natural Lips</h3>
               <p class="muted" style="margin:0">Modelowanie ust kwasem hialuronowym, z naturalnym efektem.</p>
               <div class="big">690 zł</div>
-              <blockquote class="quote">„Pełen profesjonalizm, usta bajkowe.”<cite>Sylwia, usta</cite></blockquote>
             </div>
           </div>
           <div style="max-width:780px">
@@ -1005,17 +1012,27 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
   </div>
   <section class="sec sec--tight" style="padding-top:0">
     <div class="wrap">
-      <div class="score">
-        <div class="score__big">5,0</div>
-        <div>
-          <span class="stars" aria-label="5 na 5 gwiazdek"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
-          <p class="score__count"><strong>336 opinii</strong> w Booksy, na obu naszych profilach</p>
-          <div class="profiles">
-            <a class="profile" href="https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow" target="_blank" rel="noopener"><b>5,0</b>Aura SPA, 164 opinie</a>
-            <a class="profile" href="https://booksy.com/pl-pl/243811_aura-holistic-medical-spa-kinga-zalewska-medycyna-regeneracyjna_medycyna-estetyczna_4404_pruszkow" target="_blank" rel="noopener"><b>5,0</b>Aura MEDICAL, 172 opinie</a>
+      <div class="scores">
+        <div class="score">
+          <div class="score__big">5,0</div>
+          <div>
+            <span class="tag"><svg aria-hidden="true"><use href="#i-med"/></svg>Aura MEDICAL</span>
+            <span class="stars" aria-label="5 na 5 gwiazdek"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+            <p class="score__count"><strong>172 opinie</strong> na Booksy MEDICAL</p>
+            <div class="profiles"><a class="btn btn--line" href="https://booksy.com/pl-pl/243811_aura-holistic-medical-spa-kinga-zalewska-medycyna-regeneracyjna_medycyna-estetyczna_4404_pruszkow" target="_blank" rel="noopener" aria-label="Opinie Aura MEDICAL na Booksy">Opinie na Booksy</a></div>
+          </div>
+        </div>
+        <div class="score">
+          <div class="score__big">5,0</div>
+          <div>
+            <span class="tag tag--spa"><svg aria-hidden="true"><use href="#i-leaf"/></svg>Aura SPA</span>
+            <span class="stars" aria-label="5 na 5 gwiazdek"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+            <p class="score__count"><strong>164 opinie</strong> na Booksy SPA</p>
+            <div class="profiles"><a class="btn btn--line" href="https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow" target="_blank" rel="noopener" aria-label="Opinie Aura SPA na Booksy">Opinie na Booksy</a></div>
           </div>
         </div>
       </div>
+      <h3 class="revs__h">Z opinii o zabiegach SPA</h3>
       <div class="revs" id="revs"></div>
     </div>
   </section>
@@ -1035,7 +1052,7 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
       <div class="about">
         <p class="about__quote">„Miejsce, w którym dusza łączy się z ciałem, a piękno ze zdrowiem.”</p>
         <div>
-          <p class="lead">Łączymy rytuały spa z medycyną regeneracyjną. U nas możesz odpocząć przy Head Spa i masażu, a w tym samym miejscu zadbać o skórę z pomocą medycyny estetycznej i autologicznej.</p>
+          <p class="lead">Łączymy medycynę regeneracyjną z rytuałami spa. U nas zadbasz o skórę z pomocą medycyny estetycznej i autologicznej, a w tym samym miejscu odpoczniesz przy Head Spa i masażu.</p>
           <p class="muted">Zapraszamy do Pruszkowa, na Wołowskiego 2.</p>
         </div>
       </div>
@@ -1081,8 +1098,8 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
           <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&amp;query=AURA%20HOLISTIC%20MEDICAL%26SPA%2C%20Wo%C5%82owskiego%202%2C%2005-803%20Pruszk%C3%B3w" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Wyznacz trasę</a>
         </div>
         <div class="links">
-          <a class="btn btn--line" href="https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow" target="_blank" rel="noopener">Booksy SPA</a>
           <a class="btn btn--line" href="https://booksy.com/pl-pl/243811_aura-holistic-medical-spa-kinga-zalewska-medycyna-regeneracyjna_medycyna-estetyczna_4404_pruszkow" target="_blank" rel="noopener">Booksy MEDICAL</a>
+          <a class="btn btn--line" href="https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow" target="_blank" rel="noopener">Booksy SPA</a>
         </div>
         <div class="links">
           <a class="btn btn--line" href="https://www.instagram.com/aura_holistic_medical_spa/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Instagram</a>
@@ -1094,21 +1111,21 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
         <p class="muted small">Przyjmujemy po wcześniejszej rezerwacji.</p>
         <div class="hours-grid">
           <div>
-            <h3>SPA</h3>
-            <ul class="hours">
-              <li><span>Wtorek</span><span>10:00–19:00</span></li>
-              <li><span>Środa</span><span>10:00–21:00</span></li>
-              <li><span>Czwartek</span><span>10:00–20:00</span></li>
-              <li><span>Piątek</span><span>9:00–21:00</span></li>
-            </ul>
-          </div>
-          <div>
             <h3>MEDICAL</h3>
             <ul class="hours">
               <li><span>Wtorek</span><span>17:30–21:30</span></li>
               <li><span>Środa</span><span>10:00–22:00</span></li>
               <li><span>Czwartek</span><span>9:00–22:00</span></li>
               <li><span>Piątek</span><span>9:00–22:00</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>SPA</h3>
+            <ul class="hours">
+              <li><span>Wtorek</span><span>10:00–19:00</span></li>
+              <li><span>Środa</span><span>10:00–21:00</span></li>
+              <li><span>Czwartek</span><span>10:00–20:00</span></li>
+              <li><span>Piątek</span><span>9:00–21:00</span></li>
             </ul>
           </div>
         </div>
@@ -1133,14 +1150,14 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
       <li><a href="tel:+48535549554">tel. 535 549 554</a></li>
     </ul>
     <ul>
-      <li><a href="#spa">SPA</a></li>
       <li><a href="#medical">MEDICAL</a></li>
+      <li><a href="#spa">SPA</a></li>
       <li><a href="#realizacje">Realizacje</a></li>
       <li><a href="#opinie">Opinie</a></li>
     </ul>
     <ul>
-      <li><a href="https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow" target="_blank" rel="noopener">Booksy SPA</a></li>
       <li><a href="https://booksy.com/pl-pl/243811_aura-holistic-medical-spa-kinga-zalewska-medycyna-regeneracyjna_medycyna-estetyczna_4404_pruszkow" target="_blank" rel="noopener">Booksy MEDICAL</a></li>
+      <li><a href="https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow" target="_blank" rel="noopener">Booksy SPA</a></li>
       <li><a href="https://www.instagram.com/aura_holistic_medical_spa/" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.facebook.com/share/1An9zxqZTr/" target="_blank" rel="noopener">Facebook</a></li>
     </ul>
@@ -1149,7 +1166,7 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
 
 <div class="bar">
   <a class="btn btn--line" href="tel:+48535549554"><svg aria-hidden="true"><use href="#i-tel"/></svg>Zadzwoń</a>
-  <a class="btn btn--solid js-book" href="https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow" target="_blank" rel="noopener">Zarezerwuj</a>
+  <a class="btn btn--solid js-book" href="https://booksy.com/pl-pl/243811_aura-holistic-medical-spa-kinga-zalewska-medycyna-regeneracyjna_medycyna-estetyczna_4404_pruszkow" target="_blank" rel="noopener">Zarezerwuj</a>
 </div>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
@@ -1197,12 +1214,10 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
   /* ---------- reviews ---------- */
   var REVS = [
     ['Sylwia', 'Head Spa', 'Cudowna wizyta pełna relaksu, dźwiękoterapia niesamowita. Umówiłam wizyty co tydzień na cały miesiąc.'],
-    ['Joanna', 'akupunktura i Head Spa', 'Akupunktura ukoiła moje nerwy, a head spa to chwila tylko dla mnie.'],
-    ['Ewa', 'usta', 'Praca profesjonalnie zrobiona, podejście do klientki na 100%.'],
-    ['Michał', 'Head Spa', 'Piękny lokal, super zabieg, head spa stworzone z pasji. Niesamowita energia.'],
     ['Renata', 'akupunktura', 'Wspaniały, wielowymiarowy zabieg. Polecam usługi pani Kingi.'],
+    ['Joanna', 'akupunktura i Head Spa', 'Akupunktura ukoiła moje nerwy, a head spa to chwila tylko dla mnie.'],
+    ['Michał', 'Head Spa', 'Piękny lokal, super zabieg, head spa stworzone z pasji. Niesamowita energia.'],
     ['Aneta', 'Head Spa Basic', 'Niesamowicie relaksujący, idealne połączenie pielęgnacji i odpoczynku.'],
-    ['Sylwia', 'usta', 'Pełen profesjonalizm, usta bajkowe.'],
     ['Urszula', 'Head Spa Medium', '1,5 h relaksacji dla ciała i umysłu.'],
     ['Ada', 'Kobido', 'Cudowny masaż, bardzo profesjonalny.'],
     ['Michalina', 'paznokcie', 'Perfekcja i dbanie o każdy detal.']
@@ -1307,7 +1322,7 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
       revealInStrip(st.parentElement, sa);
     }
 
-    setMode(r.m === 'medical' || (r.m === 'realizacje' && r.s === 'medical') ? 'medical' : 'spa');
+    setMode(r.m === 'spa' ? 'spa' : 'medical');
 
     if (r.m === 'start') document.title = HOME_TITLE;
     else {
