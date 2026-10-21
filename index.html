@@ -130,7 +130,6 @@ p{margin:0 0 1em}
 .btn--line{border-color:var(--ink);color:var(--ink);background:transparent}
 .btn--line:hover{background:var(--accent-pale)}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-.hero .cta{grid-area:cta}
 
 /* image slots */
 .ph{position:relative;overflow:hidden;border-radius:22px;margin:0;
@@ -303,23 +302,9 @@ html.js .panel:not(.on), html.js .sub:not(.on){display:none}
 
 /* ---------- START ---------- */
 .hero{position:relative;padding:clamp(18px,3vw,36px) 0 0;overflow:hidden}
-.stage{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,clamp(250px,30vw,380px));
-  grid-template-rows:1fr auto auto auto 1fr;grid-template-areas:". kz" "h1 kz" "sub kz" "cta kz" ". kz";
-  column-gap:clamp(28px,6vw,96px);padding:clamp(28px,4.5vw,56px) 0 clamp(70px,7vw,92px)}
-.aura{position:absolute;z-index:0;left:50%;top:44%;width:clamp(330px,46vw,600px);aspect-ratio:1;
-  transform:translate(-50%,-50%);pointer-events:none}
-/* portret Kingi */
-.kz{grid-area:kz;position:relative;align-self:center}
-.kz__ph{position:relative;z-index:1;aspect-ratio:4/5;isolation:isolate;
-  border-radius:clamp(70px,9vw,130px) 22px clamp(70px,9vw,130px) 22px;
-  background:color-mix(in srgb,var(--bg) 45%,#fff) !important;
-  box-shadow:0 0 0 1px var(--line),0 24px 50px -30px rgba(30,40,45,.35);
-  outline:1px solid color-mix(in srgb,var(--accent) 55%,transparent);outline-offset:9px}
-.kz__ph::after{display:none}
-.kz__ph img{mix-blend-mode:multiply;object-position:50% 40%}
-.kz__cap{position:relative;z-index:1;margin:22px 0 0;display:flex;flex-direction:column;gap:2px;padding-left:4px}
-.kz__cap b{font-family:var(--f-display);font-weight:400;font-variation-settings:"SOFT" var(--soft),"opsz" 36;font-size:1.32rem;line-height:1.2}
-.kz__cap span{font-size:.92rem;color:var(--accent-ink)}
+.stage{position:relative;min-height:clamp(380px,50vw,560px)}
+.aura{position:absolute;z-index:0;left:clamp(-120px,-6vw,-20px);top:50%;width:clamp(330px,60vw,620px);aspect-ratio:1;
+  transform:translateY(-50%);pointer-events:none}
 .aura__body{position:absolute;inset:0;border-radius:50%;
   background:
     radial-gradient(closest-side,rgba(255,255,255,.85),rgba(255,255,255,0) 55%),
@@ -329,6 +314,9 @@ html.js .panel:not(.on), html.js .sub:not(.on){display:none}
 .aura__ring{position:absolute;inset:9%;border-radius:50%;border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);
   transform:scale(.8);animation:breathe 10s infinite;opacity:.8}
 .aura__ring--2{inset:20%;animation-delay:-.4s;opacity:.45}
+.aura__kz{position:absolute;margin:0;left:33%;top:33%;width:34%;aspect-ratio:1;border-radius:50%;overflow:hidden;
+  background:#fff;box-shadow:0 0 0 6px color-mix(in srgb,var(--bg,#eef1f0) 70%,transparent),0 0 0 7px color-mix(in srgb,var(--accent) 40%,transparent),0 18px 40px -22px rgba(30,45,50,.45)}
+.aura__kz img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
 @keyframes breathe{
   0%{transform:scale(.8);animation-timing-function:cubic-bezier(.37,0,.63,1)}
   40%{transform:scale(1);animation-timing-function:cubic-bezier(.37,0,.63,1)}
@@ -344,18 +332,17 @@ html.js .panel:not(.on), html.js .sub:not(.on){display:none}
 @keyframes sayOut{0%,38%{opacity:0}42%,97%{opacity:1}100%{opacity:0}}
 .breath__dot{width:10px;height:10px;border-radius:50%;background:var(--accent);animation:breathe 10s infinite}
 
-.hero__text{display:contents}
-.hero__text > *{position:relative;z-index:2}
-.hero h1{grid-area:h1;font-size:clamp(2.4rem,4.9vw,4.4rem);line-height:1.02;letter-spacing:-.02em;max-width:11.5em}
+.hero__text{position:relative;z-index:2;padding:clamp(40px,7vw,84px) 0 clamp(70px,8vw,100px) clamp(0px,24vw,330px)}
+.hero h1{font-size:clamp(2.55rem,7vw,5.4rem);line-height:1.02;letter-spacing:-.02em;max-width:11.5em}
 .hero h1 .l{display:block;transition:opacity .7s var(--ease)}
-.hero__sub{grid-area:sub;margin-top:24px;max-width:31em;font-size:1.12rem;color:var(--ink-soft)}
+.hero__sub{margin-top:24px;max-width:31em;font-size:1.12rem;color:var(--ink-soft)}
 #p-start:has(.door--spa:hover) .hero h1 .l1,
 #p-start:has(.door--spa:focus-within) .hero h1 .l1,
 #p-start:has(.door--med:hover) .hero h1 .l2,
 #p-start:has(.door--med:focus-within) .hero h1 .l2{opacity:.32}
 #p-start:has(.door--spa:hover) .aura,
 #p-start:has(.door--spa:focus-within) .aura{--glow-a:rgba(179,146,121,.55);--glow-b:rgba(140,156,126,.55)}
-.hero__photo{height:clamp(170px,24vw,320px);border-radius:clamp(28px,6vw,80px) clamp(28px,6vw,80px) 0 0}
+.hero__photo{height:clamp(220px,36vw,480px);border-radius:clamp(28px,6vw,80px) clamp(28px,6vw,80px) 0 0}
 
 /* doors */
 .doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2vw,22px)}
@@ -509,12 +496,9 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
   .bar{display:flex}
   .top__book{display:none}
   .foot{padding-bottom:120px}
-  .stage{grid-template-columns:minmax(0,1fr);grid-template-rows:none;grid-template-areas:"h1" "kz" "sub" "cta";padding:clamp(20px,6vw,36px) 0 64px}
-  .hero h1{font-size:clamp(2.4rem,9.4vw,3.4rem)}
-  .kz{width:min(74%,300px);margin:30px auto 6px}
-  .aura{width:min(118vw,520px);top:46%}
-  .kz__ph{border-radius:76px 20px 76px 20px}
-  .kz__cap{align-items:center;text-align:center;padding-left:0;margin-top:20px}
+  .stage{min-height:0}
+  .aura{left:50%;top:0;width:min(118vw,520px);transform:translate(-50%,-18%)}
+  .hero__text{padding:clamp(232px,64vw,290px) 0 64px}
   .breath{left:0;bottom:22px}
   .cta .btn{flex:1 1 auto}
   .doors,.duo,.team,.cards{grid-template-columns:minmax(0,1fr)}
@@ -583,14 +567,11 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
   <div class="hero">
     <div class="wrap">
       <div class="stage">
-        <div class="kz">
-          <div class="aura" aria-hidden="true">
-            <div class="aura__body"></div>
-            <div class="aura__ring"></div>
-            <div class="aura__ring aura__ring--2"></div>
-          </div>
-          <figure class="ph kz__ph" data-rm><img src="img/start_kinga.jpg" alt="Kinga Zalewska, AURA HOLISTIC MEDICAL&amp;SPA" width="820" height="1025"></figure>
-          <p class="kz__cap"><b>Kinga Zalewska</b><span>Medycyna estetyczna i autologiczna</span></p>
+        <div class="aura">
+          <div class="aura__body" aria-hidden="true"></div>
+          <div class="aura__ring" aria-hidden="true"></div>
+          <div class="aura__ring aura__ring--2" aria-hidden="true"></div>
+          <figure class="aura__kz"><img src="img/start_kinga.jpg" alt="Kinga Zalewska, AURA HOLISTIC MEDICAL&amp;SPA"></figure>
         </div>
         <div class="hero__text">
           <h1><span class="l l1">Medycyna estetyczna</span> <span class="l l2">i Head Spa w&nbsp;Pruszkowie</span></h1>
