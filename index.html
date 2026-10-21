@@ -314,16 +314,17 @@ html.js .panel:not(.on), html.js .sub:not(.on){display:none}
 .aura__ring{position:absolute;inset:9%;border-radius:50%;border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);
   transform:scale(.8);animation:breathe 10s infinite;opacity:.8}
 .aura__ring--2{inset:20%;animation-delay:-.4s;opacity:.45}
-.hero__kz{position:absolute;z-index:2;right:0;bottom:18px;margin:0;display:flex;flex-direction:column;align-items:center;gap:10px;width:196px}
-@media (min-width:1360px){.hero__kz{right:-34px}}
-.hero__kz .ph{width:184px;aspect-ratio:1;border-radius:50%;overflow:hidden;background:#fff;
+.hero__kz{position:absolute;z-index:2;right:0;top:50%;transform:translateY(-50%);margin:0;display:flex;flex-direction:column;align-items:center;gap:12px;width:clamp(220px,20vw,290px)}
+@media (min-width:1360px){.hero__kz{right:-20px}}
+@media (min-width:1000px){.hero .hero__text{padding-left:clamp(0px,2vw,30px)}.hero .hero__text h1{max-width:8.8em}}
+.hero__kz .ph{width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;background:#fff;
   box-shadow:0 0 0 6px color-mix(in srgb,var(--bg,#eef1f0) 70%,transparent),0 0 0 7px color-mix(in srgb,var(--accent) 40%,transparent),0 18px 40px -22px rgba(30,45,50,.45)}
 .hero__kz img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
-.hero__kz figcaption{font-family:var(--f-display);font-size:1.05rem;color:var(--ink);text-align:center;line-height:1.2}
+.hero__kz figcaption{font-family:var(--f-display);font-size:1.2rem;color:var(--ink);text-align:center;line-height:1.2}
 .hero__kz figcaption small{display:block;font-family:var(--f-body);font-size:.8rem;color:var(--ink-soft);margin-top:2px}
-@media (max-width:1199px){
-  .hero__kz{position:static;flex-direction:row;width:auto;margin:28px 0 0;gap:14px;align-items:center}
-  .hero__kz .ph{width:112px;flex:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 30%,transparent)}
+@media (max-width:999px){
+  .hero__kz{position:static;flex-direction:row;width:auto;transform:none;margin:28px 0 0;gap:16px;align-items:center}
+  .hero__kz .ph{width:150px;flex:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 30%,transparent)}
   .hero__kz figcaption{text-align:left}
 }
 @keyframes breathe{
@@ -507,12 +508,12 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
   .top__book{display:none}
   .foot{padding-bottom:120px}
   .stage{min-height:0}
-  .aura{left:50%;top:0;width:min(118vw,520px);transform:translate(-50%,-18%)}
-  .hero__text{padding:clamp(150px,44vw,220px) 0 64px}
+  .aura{left:-22vw;top:0;width:min(104vw,460px);transform:translateY(-14%)}
+  .hero__text{display:flex;flex-direction:column;padding:12px 0 64px}
   .breath{left:0;bottom:22px}
-  .hero__kz{position:static;flex-direction:row;width:auto;margin:28px 0 0;gap:14px;align-items:center}
-  .hero__kz .ph{width:112px;flex:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 30%,transparent)}
-  .hero__kz figcaption{text-align:left}
+  .hero__kz{order:-1;position:static;transform:none;align-self:flex-end;flex-direction:column;width:auto;margin:0 0 22px;gap:8px;align-items:center}
+  .hero__kz .ph{width:clamp(150px,44vw,190px);flex:none}
+  .hero__kz figcaption{text-align:center;font-size:1.05rem}
   .cta .btn{flex:1 1 auto}
   .doors,.duo,.team,.cards{grid-template-columns:minmax(0,1fr)}
   .stats .wrap{grid-template-columns:1fr 1fr}
