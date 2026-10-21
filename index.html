@@ -1232,7 +1232,7 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
       var alt = d.cap + ' w AURA, zdjęcie ' + (i + 1);
       b.setAttribute('aria-label', 'Powiększ: ' + alt);
       var im = document.createElement('img');
-      im.alt = alt; im.decoding = 'async'; im.src = src;
+      im.alt = alt; im.decoding = 'async'; im.loading = 'lazy'; im.src = src;
       b.appendChild(im); g.appendChild(b);
     });
     var ig = document.createElement('a');
