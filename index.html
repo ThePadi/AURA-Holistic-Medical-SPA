@@ -1015,17 +1015,27 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
     <div class="wrap">
       <span class="tag"><svg aria-hidden="true"><use href="#i-leaf"/></svg>Realizacje</span>
       <h2>Zajrzyj do nas</h2>
-      <p class="lead">Efekty zabiegów medycyny estetycznej i nasze paznokcie. Kliknij zdjęcie, żeby je powiększyć.</p>
+      <p class="lead">Efekty naszych zabiegów: medycyna estetyczna, makijaż permanentny, SPA i paznokcie. Kliknij zdjęcie, żeby je powiększyć.</p>
     </div>
   </div>
   <nav class="subnav" aria-label="Realizacje">
     <div class="subnav__scroll"><div class="strack">
       <span class="ink" aria-hidden="true"></span>
-      <a href="#realizacje/medical" data-sub="medical">Medycyna estetyczna</a>
+      <a href="#realizacje/botoks" data-sub="botoks">Zmarszczki</a>
+      <a href="#realizacje/usta" data-sub="usta">Usta</a>
+      <a href="#realizacje/skora" data-sub="skora">Skóra i twarz</a>
+      <a href="#realizacje/pmu" data-sub="pmu">Makijaż permanentny</a>
+      <a href="#realizacje/spa" data-sub="spa">SPA</a>
       <a href="#realizacje/paznokcie" data-sub="paznokcie">Paznokcie</a>
     </div></div>
   </nav>
-  <div class="sub" data-sub="medical" data-title="Medycyna estetyczna"><section class="sec sec--tight"><div class="wrap"><div class="gal" data-gal="medical"></div></div></section></div>
+  <div class="sub" data-sub="botoks" data-title="Zmarszczki"><section class="sec sec--tight"><div class="wrap"><div class="gal" data-gal="botoks"></div></div></section></div>
+  <div class="sub" data-sub="usta" data-title="Usta"><section class="sec sec--tight"><div class="wrap"><div class="gal" data-gal="usta"></div></div></section></div>
+  <div class="sub" data-sub="skora" data-title="Skóra i twarz"><section class="sec sec--tight"><div class="wrap"><div class="gal" data-gal="skora"></div></div></section></div>
+  <div class="sub" data-sub="pmu" data-title="Makijaż permanentny"><section class="sec sec--tight"><div class="wrap"><div class="gal" data-gal="pmu"></div></div></section></div>
+  <div class="sub" data-sub="spa" data-title="SPA"><section class="sec sec--tight"><div class="wrap"><div class="gal" data-gal="spa"></div></div></section></div>
+  <div class="sub" data-sub="paznokcie" data-title="Paznokcie"><section class="sec sec--tight"><div class="wrap"><div class="gal" data-gal="paznokcie"></div></div></section></div>
+</section></div>
   <div class="sub" data-sub="paznokcie" data-title="Paznokcie"><section class="sec sec--tight"><div class="wrap"><div class="gal" data-gal="paznokcie"></div></div></section></div>
 </section>
 
@@ -1219,11 +1229,14 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
 
   /* ---------- galleries (Realizacje) ---------- */
   var GAL = {
-    medical: { cap: 'Medycyna estetyczna', items: [
-      'img/medical_13.jpg','img/medical_14.jpg','img/medical_01.jpg','img/medical_02.jpg','img/medical_03.jpg','img/medical_04.jpg','img/medical_05.jpg','img/medical_06.jpg',
-      'img/medical_07.jpg','img/medical_08.jpg','img/medical_09.jpg','img/medical_10.jpg','img/medical_11.jpg','img/medical_12.jpg'] },
+    botoks: { cap: 'Zmarszczki mimiczne', items: ['img/r_botoks_01.jpg','img/r_botoks_02.jpg','img/r_botoks_03.jpg','img/r_botoks_04.jpg','img/r_botoks_05.jpg','img/r_botoks_06.jpg','img/r_botoks_07.jpg','img/r_botoks_08.jpg','img/r_botoks_09.jpg'] },
+    usta: { cap: 'Usta', items: ['img/r_usta_01.jpg','img/r_usta_02.jpg','img/r_usta_03.jpg','img/r_usta_04.jpg','img/r_usta_05.jpg'] },
+    skora: { cap: 'Skóra i twarz', items: ['img/r_skora_01.jpg','img/r_skora_02.jpg','img/r_skora_03.jpg','img/r_skora_04.jpg','img/r_skora_05.jpg','img/r_skora_06.jpg','img/r_skora_07.jpg','img/r_skora_08.jpg','img/r_skora_09.jpg'] },
+    pmu: { cap: 'Makijaż permanentny', items: ['img/r_pmu_01.jpg','img/r_pmu_02.jpg','img/r_pmu_03.jpg'] },
+    spa: { cap: 'SPA', items: ['img/r_spa_01.jpg','img/r_spa_02.jpg','img/r_spa_03.jpg'] },
     paznokcie: { cap: 'Paznokcie', items: ['img/paznokcie_01.jpg','img/paznokcie_02.jpg','img/paznokcie_03.jpg','img/paznokcie_04.jpg','img/paznokcie_05.jpg','img/paznokcie_06.jpg','img/paznokcie_07.jpg','img/paznokcie_08.jpg','img/paznokcie_09.jpg','img/paznokcie_10.jpg','img/paznokcie_11.jpg','img/paznokcie_12.jpg','img/paznokcie_13.jpg','img/paznokcie_14.jpg','img/paznokcie_15.jpg','img/paznokcie_16.jpg'] }
   };
+
   document.querySelectorAll('[data-gal]').forEach(function (g) {
     var d = GAL[g.getAttribute('data-gal')];
     d.items.forEach(function (src, i) {
