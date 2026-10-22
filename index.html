@@ -314,19 +314,6 @@ html.js .panel:not(.on), html.js .sub:not(.on){display:none}
 .aura__ring{position:absolute;inset:9%;border-radius:50%;border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);
   transform:scale(.8);animation:breathe 10s infinite;opacity:.8}
 .aura__ring--2{inset:20%;animation-delay:-.4s;opacity:.45}
-.hero__kz{position:absolute;z-index:2;right:0;top:50%;transform:translateY(-50%);margin:0;display:flex;flex-direction:column;align-items:center;gap:12px;width:clamp(220px,20vw,290px)}
-@media (min-width:1360px){.hero__kz{right:-20px}}
-@media (min-width:1000px){.hero .hero__text{padding-left:clamp(0px,2vw,30px)}.hero .hero__text h1{max-width:8.8em}}
-.hero__kz .ph{width:100%;aspect-ratio:1;border-radius:50%;overflow:hidden;background:#fff;
-  box-shadow:0 0 0 6px color-mix(in srgb,var(--bg,#eef1f0) 70%,transparent),0 0 0 7px color-mix(in srgb,var(--accent) 40%,transparent),0 18px 40px -22px rgba(30,45,50,.45)}
-.hero__kz img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
-.hero__kz figcaption{font-family:var(--f-display);font-size:1.2rem;color:var(--ink);text-align:center;line-height:1.2}
-.hero__kz figcaption small{display:block;font-family:var(--f-body);font-size:.8rem;color:var(--ink-soft);margin-top:2px}
-@media (max-width:999px){
-  .hero__kz{position:static;flex-direction:row;width:auto;transform:none;margin:28px 0 0;gap:16px;align-items:center}
-  .hero__kz .ph{width:150px;flex:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 30%,transparent)}
-  .hero__kz figcaption{text-align:left}
-}
 @keyframes breathe{
   0%{transform:scale(.8);animation-timing-function:cubic-bezier(.37,0,.63,1)}
   40%{transform:scale(1);animation-timing-function:cubic-bezier(.37,0,.63,1)}
@@ -342,6 +329,30 @@ html.js .panel:not(.on), html.js .sub:not(.on){display:none}
 @keyframes sayOut{0%,38%{opacity:0}42%,97%{opacity:1}100%{opacity:0}}
 .breath__dot{width:10px;height:10px;border-radius:50%;background:var(--accent);animation:breathe 10s infinite}
 
+.hero{background:var(--bg)}
+.hero .hero__text{z-index:auto}
+.hero .hero__text>*:not(.hero__kz){position:relative;z-index:2}
+.hero__kz{margin:0;position:relative}
+.hero__kz img{display:block;width:100%;height:100%;object-fit:contain;object-position:50% 100%;mix-blend-mode:multiply}
+.hero__kz figcaption{position:absolute;left:0;bottom:8%;font-family:var(--f-display);font-size:1.15rem;line-height:1.2;color:var(--ink);background:color-mix(in srgb,var(--bg) 82%,transparent);padding:8px 14px;border-radius:14px}
+.hero__kz figcaption small{display:block;font-family:var(--f-body);font-size:.8rem;color:var(--ink-soft);margin-top:2px}
+@media (min-width:1000px){
+  .stage{min-height:clamp(560px,47vw,700px)}
+  .hero .hero__text{position:static;padding-left:clamp(0px,2vw,30px);padding-right:0}
+  .hero .hero__text h1{max-width:8.8em;font-size:clamp(2.7rem,4.6vw,4.6rem)}
+  .hero .hero__sub{max-width:27em}
+  .hero__kz{position:absolute;right:clamp(-48px,-2.5vw,0px);bottom:0;height:100%;aspect-ratio:1036/1410;width:auto}
+  .hero__kz figcaption{left:-6%;bottom:12%}
+}
+@media (max-width:999px){
+  .hero__text{display:flex;flex-direction:column}
+  .hero__kz{order:-1;align-self:flex-end;width:min(70vw,420px);aspect-ratio:1036/1410;margin:-8px -8px 4px 0}
+  .hero__kz figcaption{left:-22%;bottom:10%;font-size:1.02rem}
+}
+@media (min-width:761px) and (max-width:999px){
+  .hero__kz{width:min(46vw,400px);margin:0 0 -40px}
+  .hero .hero__text{padding-top:24px}
+}
 .hero__text{position:relative;z-index:2;padding:clamp(40px,7vw,84px) 0 clamp(70px,8vw,100px) clamp(0px,24vw,330px)}
 .hero h1{font-size:clamp(2.55rem,7vw,5.4rem);line-height:1.02;letter-spacing:-.02em;max-width:11.5em}
 .hero h1 .l{display:block;transition:opacity .7s var(--ease)}
@@ -511,9 +522,6 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
   .aura{left:-22vw;top:0;width:min(104vw,460px);transform:translateY(-14%)}
   .hero__text{display:flex;flex-direction:column;padding:12px 0 64px}
   .breath{left:0;bottom:22px}
-  .hero__kz{order:-1;position:static;transform:none;align-self:flex-end;flex-direction:column;width:auto;margin:0 0 22px;gap:8px;align-items:center}
-  .hero__kz .ph{width:clamp(150px,44vw,190px);flex:none}
-  .hero__kz figcaption{text-align:center;font-size:1.05rem}
   .cta .btn{flex:1 1 auto}
   .doors,.duo,.team,.cards{grid-template-columns:minmax(0,1fr)}
   .stats .wrap{grid-template-columns:1fr 1fr}
@@ -594,7 +602,7 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
             <a class="btn btn--line" href="https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow" target="_blank" rel="noopener">Zarezerwuj SPA</a>
             <a class="btn btn--line" href="tel:+48535549554"><svg aria-hidden="true"><use href="#i-tel"/></svg>535 549 554</a>
           </div>
-          <figure class="hero__kz"><div class="ph"><img src="img/start_kinga.jpg" alt="Kinga Zalewska, AURA HOLISTIC MEDICAL&amp;SPA"></div><figcaption>Kinga Zalewska<small>Medycyna estetyczna i autologiczna</small></figcaption></figure>
+          <figure class="hero__kz"><img src="img/start_kinga_full.jpg" alt="Kinga Zalewska, AURA HOLISTIC MEDICAL&amp;SPA" fetchpriority="high"><figcaption>Kinga Zalewska<small>Medycyna estetyczna i autologiczna</small></figcaption></figure>
         </div>
         <p class="breath" aria-hidden="true"><span class="breath__dot"></span>oddychaj razem z nami <span class="breath__state"><i class="in">wdech</i><i class="out">wydech</i></span></p>
       </div>
@@ -1035,8 +1043,6 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
   <div class="sub" data-sub="pmu" data-title="Makijaż permanentny"><section class="sec sec--tight"><div class="wrap"><div class="gal" data-gal="pmu"></div></div></section></div>
   <div class="sub" data-sub="spa" data-title="SPA"><section class="sec sec--tight"><div class="wrap"><div class="gal" data-gal="spa"></div></div></section></div>
   <div class="sub" data-sub="paznokcie" data-title="Paznokcie"><section class="sec sec--tight"><div class="wrap"><div class="gal" data-gal="paznokcie"></div></div></section></div>
-</section></div>
-  <div class="sub" data-sub="paznokcie" data-title="Paznokcie"><section class="sec sec--tight"><div class="wrap"><div class="gal" data-gal="paznokcie"></div></div></section></div>
 </section>
 
 <!-- ============ OPINIE ============ -->
@@ -1230,10 +1236,10 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
   /* ---------- galleries (Realizacje) ---------- */
   var GAL = {
     botoks: { cap: 'Zmarszczki mimiczne', items: ['img/r_botoks_01.jpg','img/r_botoks_02.jpg','img/r_botoks_03.jpg','img/r_botoks_04.jpg','img/r_botoks_05.jpg','img/r_botoks_06.jpg','img/r_botoks_07.jpg','img/r_botoks_08.jpg','img/r_botoks_09.jpg'] },
-    usta: { cap: 'Usta', items: ['img/r_usta_01.jpg','img/r_usta_02.jpg','img/r_usta_03.jpg','img/r_usta_04.jpg','img/r_usta_05.jpg'] },
-    skora: { cap: 'Skóra i twarz', items: ['img/r_skora_01.jpg','img/r_skora_02.jpg','img/r_skora_03.jpg','img/r_skora_04.jpg','img/r_skora_05.jpg','img/r_skora_06.jpg','img/r_skora_07.jpg','img/r_skora_08.jpg','img/r_skora_09.jpg'] },
+    usta: { cap: 'Usta', items: ['img/r_usta_01.jpg','img/r_usta_02.jpg','img/r_usta_03.jpg','img/r_usta_04.jpg','img/r_usta_05.jpg','img/r_usta_06.jpg'] },
+    skora: { cap: 'Skóra i twarz', items: ['img/r_skora_01.jpg','img/r_skora_02.jpg','img/r_skora_03.jpg','img/r_skora_04.jpg','img/r_skora_05.jpg','img/r_skora_06.jpg','img/r_skora_07.jpg','img/r_skora_08.jpg','img/r_skora_09.jpg','img/r_skora_10.jpg'] },
     pmu: { cap: 'Makijaż permanentny', items: ['img/r_pmu_01.jpg','img/r_pmu_02.jpg','img/r_pmu_03.jpg'] },
-    spa: { cap: 'SPA', items: ['img/r_spa_01.jpg','img/r_spa_02.jpg','img/r_spa_03.jpg'] },
+    spa: { cap: 'SPA', items: ['img/r_spa_01.jpg','img/r_spa_02.jpg','img/r_spa_03.jpg','img/r_spa_04.jpg','img/r_spa_05.jpg','img/r_spa_06.jpg'] },
     paznokcie: { cap: 'Paznokcie', items: ['img/paznokcie_01.jpg','img/paznokcie_02.jpg','img/paznokcie_03.jpg','img/paznokcie_04.jpg','img/paznokcie_05.jpg','img/paznokcie_06.jpg','img/paznokcie_07.jpg','img/paznokcie_08.jpg','img/paznokcie_09.jpg','img/paznokcie_10.jpg','img/paznokcie_11.jpg','img/paznokcie_12.jpg','img/paznokcie_13.jpg','img/paznokcie_14.jpg','img/paznokcie_15.jpg','img/paznokcie_16.jpg'] }
   };
 
