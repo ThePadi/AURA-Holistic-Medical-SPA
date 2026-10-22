@@ -46,6 +46,8 @@
   ],
   "sameAs": [
     "https://www.instagram.com/aura_holistic_medical_spa/",
+    "https://www.instagram.com/aura_holistic_medical_spa_/",
+    "https://www.instagram.com/manicure_pedicure_pruszkow/",
     "https://www.facebook.com/share/1An9zxqZTr/",
     "https://booksy.com/pl-pl/243811_aura-holistic-medical-spa-kinga-zalewska-medycyna-regeneracyjna_medycyna-estetyczna_4404_pruszkow",
     "https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow"
@@ -1156,7 +1158,9 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
           <a class="btn btn--line" href="https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow" target="_blank" rel="noopener">Booksy SPA</a>
         </div>
         <div class="links">
-          <a class="btn btn--line" href="https://www.instagram.com/aura_holistic_medical_spa/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Instagram</a>
+          <a class="btn btn--line" href="https://www.instagram.com/aura_holistic_medical_spa/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Instagram AURA</a>
+          <a class="btn btn--line" href="https://www.instagram.com/aura_holistic_medical_spa_/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Instagram Medycyna</a>
+          <a class="btn btn--line" href="https://www.instagram.com/manicure_pedicure_pruszkow/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Instagram Paznokcie</a>
           <a class="btn btn--line" href="https://www.facebook.com/share/1An9zxqZTr/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a>
         </div>
       </div>
@@ -1212,7 +1216,9 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
     <ul>
       <li><a href="https://booksy.com/pl-pl/243811_aura-holistic-medical-spa-kinga-zalewska-medycyna-regeneracyjna_medycyna-estetyczna_4404_pruszkow" target="_blank" rel="noopener">Booksy MEDICAL</a></li>
       <li><a href="https://booksy.com/pl-pl/327379_aura-holistic-medical-spa-head-spa-masaz-akupunktura_spa-i-wellness_4404_pruszkow" target="_blank" rel="noopener">Booksy SPA</a></li>
-      <li><a href="https://www.instagram.com/aura_holistic_medical_spa/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.instagram.com/aura_holistic_medical_spa/" target="_blank" rel="noopener">Instagram AURA</a></li>
+      <li><a href="https://www.instagram.com/aura_holistic_medical_spa_/" target="_blank" rel="noopener">Instagram Medycyna</a></li>
+      <li><a href="https://www.instagram.com/manicure_pedicure_pruszkow/" target="_blank" rel="noopener">Instagram Paznokcie</a></li>
       <li><a href="https://www.facebook.com/share/1An9zxqZTr/" target="_blank" rel="noopener">Facebook</a></li>
     </ul>
   </div>
@@ -1264,8 +1270,10 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
       b.appendChild(im); g.appendChild(b);
     });
     var ig = document.createElement('a');
-    ig.className = 'tile tile--ig'; ig.href = 'https://www.instagram.com/aura_holistic_medical_spa/'; ig.target = '_blank'; ig.rel = 'noopener';
-    ig.innerHTML = '<svg aria-hidden="true"><use href="#i-ig"/></svg><b>Więcej na Instagramie</b><span>@aura_holistic_medical_spa</span>';
+    var key = g.getAttribute('data-gal');
+    var acc = (key === 'paznokcie') ? 'manicure_pedicure_pruszkow' : (key === 'botoks' || key === 'usta' || key === 'skora') ? 'aura_holistic_medical_spa_' : 'aura_holistic_medical_spa';
+    ig.className = 'tile tile--ig'; ig.href = 'https://www.instagram.com/' + acc + '/'; ig.target = '_blank'; ig.rel = 'noopener';
+    ig.innerHTML = '<svg aria-hidden="true"><use href="#i-ig"/></svg><b>Więcej na Instagramie</b><span>@' + acc + '</span>';
     g.appendChild(ig);
   });
 
