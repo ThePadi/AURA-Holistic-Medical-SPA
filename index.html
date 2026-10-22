@@ -541,6 +541,14 @@ html[data-mode="medical"] .lb{background:rgba(20,30,34,.93)}
 @media (max-width:380px){
   .ritual__opts button{font-size:.92rem}
 }
+@media (max-width:760px){
+  .hero{padding-top:0}
+  .hero .hero__text{padding-top:min(100vw,440px)}
+  .hero .hero__kz{position:absolute;top:0;left:-18px;right:-18px;width:auto;height:min(122vw,540px);margin:0;aspect-ratio:auto;align-self:auto}
+  .hero__kz img{object-fit:cover;object-position:50% 0;-webkit-mask-image:linear-gradient(#000 58%,transparent 96%);mask-image:linear-gradient(#000 58%,transparent 96%)}
+  .hero__kz::before,.hero__kz figcaption{display:none}
+  .aura{top:-40px}
+}
 @media (prefers-reduced-motion:reduce){
   .aura__body,.aura__ring,.breath__dot,.phead__glow{animation:none;transform:scale(.92)}
   .breath__state{display:none}
